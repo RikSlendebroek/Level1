@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.Switch;
 import android.widget.Toast;
 
+
 public class MainActivity extends AppCompatActivity {
     private Switch mSwitch1;
     private Switch mSwitch2;
@@ -14,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
     private Switch mSwitch4;
 
     private Button mButton;
+
+    public static final String SUCCES_MESSAGE = "Great";
+    public static final String FAIL_MESSAGE = "Oh dear, that seems to be incorrect";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,10 +48,10 @@ public class MainActivity extends AppCompatActivity {
 
         if (correct) {
 
-            message = "Great";
+            message = SUCCES_MESSAGE;
 
         } else {
-            message = "Wrong";
+            message = FAIL_MESSAGE;
         }
 
         Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
